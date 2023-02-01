@@ -1,0 +1,64 @@
+<!-- Ce code définit un document HTML -->
+<!DOCTYPE html>
+<html>
+  <!-- La section head contient des informations sur le document, telles que le titre de la page, le type de caractères utilisés, et un lien vers le fichier CSS associé -->
+  <head>
+    <!-- Titre affiché dans l'onglet du navigateur -->
+    <title>Jeu de devinette de nombre</title>
+    <!-- Définit le type de caractères utilisés pour l'affichage -->
+    <meta charset="UTF-8">
+    <!-- Lien vers le fichier CSS pour styliser le document -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+
+  <!-- La section body contient le contenu affiché sur la page -->
+  <body>
+
+    <!-- En-tête du jeu -->
+    <h1>Jeu de devinette de nombre</h1>
+
+    <!-- Instruction pour l'utilisateur -->
+    <p>Devine le nombre entre 1 et 100 :</p>
+
+    <!-- Formulaire pour entrer le nombre de devinette -->
+    <form method="submit">
+      <!-- Zone de saisie pour la devinette -->
+      <input type="text" id="guess">
+    </form>
+
+    <!-- Zone pour afficher le résultat -->
+    <div id="result"></div>
+  </body>
+
+  <!-- Script JavaScript pour gérer le jeu de devinette -->
+  <script>
+  
+    // Génération d'un nombre aléatoire
+    var number = Math.floor(Math.random() * 100) + 1;
+
+    // Écouteur d'événement pour soumettre le formulaire
+    document.querySelector("form").addEventListener("submit", function(event) {
+
+      // Empêche le rechargement de la page lors de la soumission
+      event.preventDefault();
+
+      // Récupère la valeur entrée dans le champ de devinette
+      var guess = document.getElementById("guess").value;
+
+      // Vérifie si la devinette est correcte
+      if (guess == number) {
+
+        // Affiche un message de succès
+        document.getElementById("result").innerHTML = "Bravo, vous avez gagné !";
+      } else if (guess < number) {
+    
+        // Affiche un message indiquant que le nombre est plus grand
+        document.getElementById("result").innerHTML = "Le nombre est plus grand.";
+      } else {
+
+        // Affiche un message indiquant que le nombre est plus petit
+        document.getElementById("result").innerHTML = "Le nombre est plus petit.";
+      }
+    });
+  </script>
+</html>

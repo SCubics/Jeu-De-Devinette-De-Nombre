@@ -1,0 +1,65 @@
+/* Définition des propriétés pour le corps de la page */
+body {
+  font-family: Arial, sans-serif; /* Police d'écritur */
+  background-color: #f2f2f2; /* Fond d'écran */
+  /* Pour que le contenu s'adapte à la taille de l'écran */
+  width: 100%; /* Taille */
+  max-width: 1000px; /* Taille maximal */
+  margin: 0 auto; /* Espace */
+}
+
+/* Propriétés pour l'en-tête principale */
+h1 {
+  text-align: center; /* Alignement du text */
+  font-size: 2em; /* Taille de la police d'écriture */
+  margin-top: 50px; /* Espace */
+  color: #333; /* Couleur */
+}
+
+/* Propriétés pour les paragraphes */
+p {
+  text-align: center; /* Alignement du text */
+  font-size: 1.5em; /* Police d'écriture */
+  margin-top: 20px; /* Espace */
+  color: #555; /* Couleur */
+}
+
+/* Propriétés pour le formulaire */
+form {
+  /* Espacer les éléments du formulaire */
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* Propriétés pour la zone de texte */
+input[type="text"] {
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  width: 50%;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+/* Propriétés pour le bouton */
+input[type="button"] {
+  display: none;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  margin-top: 20px;
+}
+
+/* Propriétés pour le résultat */
+#result {
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 50px;
+  color: #333;
+}
